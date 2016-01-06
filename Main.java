@@ -43,7 +43,11 @@ public class Main {
                 trainFeature[i][j + extFeatureNum] = trainCateFeature[i][j];
             }
         }
-        Adaboost model = new Adaboost(trainFeature, trainLabel);
+        double[] weight = new double[trainFeature.length];
+        for (int i = 0; i != weight.length; ++i) {
+            weight[i] = 1.0 / weight.length;
+        }
+        Bayes model = new Bayes(trainFeature, trainLabel, weight);
         String[][] testFeature = new String[testNum][];
         for (int i = 0; i != testNum; ++i) {
             testFeature[i] = new String[totalFeatureNum];

@@ -58,7 +58,7 @@ public class Catelizer {
     }
 
     private double[][] trainNumFeature;
-    private static final int splitNum = 16;
+    private static final int splitNum = 100;
     private List<Double> meanList = new ArrayList<Double>();
     private List<Double> intervalList = new ArrayList<Double>();
 

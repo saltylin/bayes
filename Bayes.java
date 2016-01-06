@@ -46,7 +46,7 @@ public class Bayes {
         for (int t: labelWeight.keySet()) {
             double tmpLog = Math.log(labelWeight.get(t));
             for (int i = 0; i != testFeature.length; ++i) {
-                double a = 0.000001;
+                double a = 0.0000007;
                 if (valMapList.get(i).get(t).containsKey(testFeature[i])) {
                     a = valMapList.get(i).get(t).get(testFeature[i]);
                 }
